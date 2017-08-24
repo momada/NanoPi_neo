@@ -47,3 +47,5 @@ To see your application, access this url in your browser:
 	http://localhost:5000
 
 All configuration is in: `configuration.py`
+
+https://scotch.io/tutorials/build-a-crud-web-app-with-python-and-flask-part-one
