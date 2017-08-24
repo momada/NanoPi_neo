@@ -5,10 +5,9 @@ Licence: GPLv3
 """
 
 from flask import Flask
-from flask.ext.bootstrap import Bootstrap
-from flask.ext.sqlalchemy import SQLAlchemy
-#from flask.ext.pymongo import PyMongo
-from flask.ext.login import LoginManager
+from flask_bootstrap import Bootstrap
+from flask_sqlalchemy import SQLAlchemy
+from flask_login import LoginManager
 from app import views, models
 
 
@@ -23,7 +22,8 @@ bs = Bootstrap(app)  # flask-bootstrap
 db = SQLAlchemy(app)  # flask-sqlalchemy
 
 lm = LoginManager()
-lm.setup_app(app)
+lm.init_app(app)
+lm.login_message = "You must be logged in to access this page."
 lm.login_view = 'login'
 
 
